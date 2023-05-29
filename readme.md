@@ -52,7 +52,7 @@ benchmark of a VIF of 5 or below and above the permissible benchmark of a VIF 10
 When considering three of more features, they had high VIF's still. Hence, only two features were selected because their
 VIF's were less than 5.
 
-### Data Visualization**:
+### Data Visualization:
 <p>
     <img src="./cbm_images/Gas Generator rate of revolutions (GGn) [rpm]_Ship_speed_(v)_[knots].png">
     <p>
@@ -72,13 +72,14 @@ VIF's were less than 5.
 ### Regression Techniques used:
 1. [Linear Regression](https://www.oxfordreference.com/display/10.1093/oi/authority.20110803100107226;jsessionid=BAD370C49344F63EAF545090E2E032DE)
 2. [K-Nearest Neighbor (KNN)](ttps://online.stat.psu.edu/stat508/lesson/k)
-3. [Decision Tree (DT)](https://online.stat.psu.edu/stat857/node/236/)
+3. [Support Vector Machine (SVM)](https://www.researchgate.net/publication/221621494_Support_Vector_Machines_Theory_and_Applications/link/0912f50fd2564392c6000000/download)
+4. [Decision Tree (DT)](https://online.stat.psu.edu/stat857/node/236/)
 
 ### Evaluation Metrics: 
 1. [Coefficient of Determination](https://www.oxfordreference.com/display/10.1093/oi/authority.20110803095621787#:~:text=In%20statistics%2C%20a%20measure%20of,Symbol%3A%20R2.)
 2. [Mean Squared Error](https://statisticsbyjim.com/regression/mean-squared-error-mse/#:~:text=The%20calculations%20for%20the%20mean,by%20the%20number%20of%20observations.)
 
-**The best Model**
+### The best Model:
 When the using the metric Mean Squared Error, the model with the lowest mean squared model is the best among all models 
 under consideration. However, while using the Coefficient of Determination, the model with the highest Coefficient of 
 Variation is preferable. Using both metrics, the Decision Tree came up as the best model
