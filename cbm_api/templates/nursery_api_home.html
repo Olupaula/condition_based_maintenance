@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/nursery.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+<div class="header">
+    <h1>
+        Determine Admission Status
+    </h1>
+</div>
+
+
+<hr>
+
+<div>
+    <h3>Introduction</h3>
+    This Api determines if a prospective student (child) should be admitted into a Nursery School using six features, namely:
+    <ol>
+        <li>Kind of Parents
+            (<span>
+                i.e. parent = {
+                "usual": 0,
+                "pretentious": 1 ,
+                "greatly pretentious": 2}
+            </span>)
+        </li>
+
+        <li>Parent has Nursery Education
+            (<span>
+                i.e. has_nurs = {
+                "proper": 0,
+                "less proper": 1,
+                "improper": 2,
+                "critical": 3,
+                "very critical": 4 }
+            </span>)
+        </li>
+
+        <li>Number of Children,
+            (<span>
+                i.e. children = {
+                1: 1,
+                2: 2,
+                3: 3,
+                "more": 4}
+            </span>)
+        </li>
+
+        <li>Housing Status of the Child's Family
+            (<span>
+                i.e. housing = {
+                "convenient": 0,
+                "less convenient": 1,
+                "inconvenient": 2}
+            </span>)
+        </li>
+
+        <li>Social Status
+            (<span>
+                i.e. social = {
+                "non problematic": 0,
+                "slightly problematic": 1,
+                "problematic": 2}
+            </span>)
+        </li>
+
+        <li>Health Status of the Child
+            (<span>
+            i.e. health = {
+            "priority: 0,
+            "not recommended": 1,
+            "recommended": 2}
+            </span>)
+        </li>
+    </ol>
+
+    <h3>How to Use</h3>
+
+    <p> Below is an example, in python file, of how to use this API: suppose there is a prospective student
+        whose parents are pretentious, have less proper nursery education, have only one child, have an inconvenient
+        housing,
+        is slightly problematic, and the child's health is recommended as shown in the table 1.0 below, then this API
+        can be
+        used thus:
+    </p>
+
+    <div class="table">
+        <table>
+            <caption> Table 1.0: Sample Data Point </caption>
+            <tr>
+                <th>Parents</th>
+                <th>Nursery</th>
+                <th>Children</th>
+                <th>Housing Status</th>
+                <th>Social Status</th>
+                <th>Health Status</th>
+            </tr>
+            <tr>
+                <td>Pretentious</td>
+                <td>Less proper nursery education</td>
+                <td>1</td>
+                <td>Inconvenient housing</td>
+                <td>Slightly problematic</td>
+                <td>Recommended</td>
+            </tr>
+        </table>
+    </div>
+
+    <p>The API can be used in a python file (named client.py in this case) as shown below </p>
+
+     <div class="code">
+         <div>client.py</div>
+         <pre>
+            <span class="primary">import</span> <span class="secondary">requests</span>
+
+            endpoint = "http://127.0.0.1:8000/nursery_api"
+            nursery_dict = {
+                'parents': 1,
+                'has_nurs': 2,
+                'children': 1,
+                'housing': 1,
+                'finance': 1,
+                'health': 2
+            }
+
+            predict = <span class="secondary">requests</span>.<span class="secondary">post</span>(endpoint, json=nursery_dict)
+
+            admission_status_dictionary = predict.<span class="secondary">json()</span>
+            <span class="primary">print</span>(<span class="strings">"Admission Status Dictionary = "</span>,  admission_status_dictionary)
+
+            admission_status = admission_status_dictionary[<span class="strings">'admission_status'</span>]
+            <span class="primary">print</span>(<span class="strings">"Amission Status = "</span>, admission_status)
+
+         </pre>
+     </div>
+    <p>  </p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+<div class="header">
+    <h1>
+        Predict Performance Degradation State of Naval Propulsion Plants
+    </h1>
+</div>
+
+
+<hr>
+
+<div>
+    <h3>Introduction</h3>
+    This API predicts the performance degradation state of naval propulsion plants given the following 2 features:
+    <ol>
+        <li>Gas Turbine shaft torque (GTT) [KNm]
+            (<span>
+                Type: Continuous
+            </span>)
+        </li>
+
+        <li> Gas Generator rate of revolutions (GGn) [rpm]
+            (<span>
+                Type: Continuous
+            </span>)
+        </li>
+    </ol>
+
+    <h3>How to Use</h3>
+
+    <p> Below is an example, in python file, of how to use this API: suppose there is a vessel which has a
+        Gas Turbine shaft torque of 12 KNm and a gas generator of revolution of 2 rpm, as shown in Table 1.0 below,
+        then, the performance degradation state can be predicted as shown below:
+    </p>
+
+    <div class="table">
+        <table>
+            <caption> Table 1.0: Sample Data Point </caption>
+            <tr>
+                <th>Gas Turbine shaft torque (GTT) [kNm]</th>
+                <th>Gas Generator rate of revolutions (GGn) [rpm]</th>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>2</td>
+            </tr>
+        </table>
+    </div>
+
+    <p>The API can be used in a python file (named client.py in this case) as shown below </p>
+
+     <div class="code">
+         <div>client.py</div>
+         <pre>
+            <span class="primary">import</span> <span class="secondary">requests</span>
+
+            endpoint = "http://127.0.0.1:8000/cbm_api"
+            data_dict = {
+                'Gas Turbine shaft torque (GTT) [kN m]': 12,
+                'Gas Generator rate of revolutions (GGn) [rpm]': 2
+            }
+
+            predict = <span class="secondary">requests</span>.<span class="secondary">post</span>(endpoint, json=data_dict)
+
+            performance_degradation_state_dict = predict.<span class="secondary">json()</span>
+            <span class="primary">print</span>(<span class="strings">"Performance Degradation State Dictionary = "</span>,  performance_degradation_state_dict)
+
+            performance_degradation_state = performance_degradation_state_dict[<span class="strings">'performance_degradation_state'</span>]
+            <span class="primary">print</span>(<span class="strings">"Performance Degradation State = "</span>, performance_degradation_state)
+
+         </pre>
+     </div>
+    <p>  </p>
+</div>
+
+</body>
+</html>
