@@ -36,7 +36,7 @@ were considered to see which model will be the best for predicting the performan
 13. Turbine Injecton Control (TIC) [%]
 14. Fuel flow (mf) [kg/s]
 
-### Utilized Features:
+### Selected (Utilized) Features:
 1. Gas Turbine shaft torque (GTT) [kN m]
 2. Gas Generator rate of revolutions (GGn) [rpm]
 
