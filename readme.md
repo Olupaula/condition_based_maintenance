@@ -84,7 +84,7 @@ When the using the metric Mean Squared Error, the model with the lowest mean squ
 under consideration. However, while using the Coefficient of Determination, the model with the highest Coefficient of 
 Variation is preferable. Using both metrics, the Decision Tree came up as the best model
 
-[View Code on Kaggle]()
+[View Code on Kaggle](https://www.kaggle.com/code/oluade111/condition-based-maintenance-of-naval-propulsion)
 
 [Use API]()
 
