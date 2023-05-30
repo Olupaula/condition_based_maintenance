@@ -14,7 +14,7 @@ capable of predicting the performance decay of any given vessel, as a predictive
 preventive maintenance is usually more cost-effective than corrective maintenance. 
 [See](https://roadtoreliability.com/types-of-maintenance/)
 
-In this project, a number[regression models](https://learn.microsoft.com/en-us/training/modules/understand-regression-machine-learning/) 
+In this project, a number of [regression models](https://learn.microsoft.com/en-us/training/modules/understand-regression-machine-learning/) 
 were considered to see which model will be the best for predicting the performance decay of naval propulsion plants.
 
 ### Data Source: [Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Condition+Based+Maintenance+of+Naval+Propulsion+Plants)
