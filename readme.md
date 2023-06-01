@@ -71,7 +71,7 @@ VIF's were less than 5.
 
 ### Regression Techniques used:
 1. [Linear Regression](https://www.oxfordreference.com/display/10.1093/oi/authority.20110803100107226;jsessionid=BAD370C49344F63EAF545090E2E032DE)
-2. [K-Nearest Neighbor (KNN)](ttps://online.stat.psu.edu/stat508/lesson/k)
+2. [K-Nearest Neighbor (KNN)](https://online.stat.psu.edu/stat508/lesson/k)
 3. [Support Vector Machine (SVM)](https://www.researchgate.net/publication/221621494_Support_Vector_Machines_Theory_and_Applications/link/0912f50fd2564392c6000000/download)
 4. [Decision Tree (DT)](https://online.stat.psu.edu/stat857/node/236/)
 
