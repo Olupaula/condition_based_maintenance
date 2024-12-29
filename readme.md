@@ -1,4 +1,4 @@
-# Condition Base Maintenance of Naval Propulsion Plants
+# Condition Based Maintenance of Naval Propulsion Plants - A Machine Learning Approach
 This project titled [Condition Based Maintenance](https://en.wikipedia.org/wiki/Predictive_maintenance) 
 of [Naval Propulsion Plants](https://en.wikipedia.org/wiki/Nuclear_marine_propulsion) deals with experiments were conducted using a numerical simulator of a naval 
 vessel (Frigate) characterized by a Gas Turbine (GT) propulsion plant with the aim of 
